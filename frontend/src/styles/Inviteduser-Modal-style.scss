@@ -1,0 +1,87 @@
+@import './sass-components//imports';
+.InviteduserModal{
+    .InviteduserModal-BG{
+        z-index: 100 !important;
+        text-align: center;
+        margin: auto;
+        max-width: 100% !important;
+        max-height: 100% !important;
+        width: 60% !important;
+        animation: show_invitedusermodal 1s ease forwards; 
+        @keyframes show_invitedusermodal{
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        
+        .InviteduserModal-Header{
+            margin: auto;
+            background: $button-background-color;
+            border-radius: 2rem 2rem 0 0;
+            border-bottom: 1px $black-color solid;
+            h2{
+                max-width: none !important;
+            }
+        }
+        .InviteduserModal-Body{
+            background: skyblue;
+            overflow: hidden;
+            .InviteduserModal-Searchbox{
+                input{
+                    max-width: 100%;
+                    max-height: 100%;
+                    font-size: 1.5rem;
+                    margin: 1rem;
+                    padding: .5rem !important;
+                    border-radius: 1rem;
+                }
+            }
+            h2{
+                    max-height: 100% !important;
+                    max-width: 100% !important;
+                    font-weight: 600;
+                    font-size: 2rem;
+                    color: $black-color;
+                }
+            .InviteduserModal-Body-scroll{
+                overflow: auto;
+                height: 10rem;
+                border-top: 1px $black-color solid ;
+                border-bottom: 1px $black-color solid ;
+                .InviteduserModal-List{
+                    float: left;
+                    position: inline;
+                    margin: .5rem;
+                    p{
+                        max-height: 100% !important;
+                        max-width: 100% !important;
+                        font-weight: 600;
+                        font-size: 2rem;
+                        color: $black-color;
+                        text-align: left !important;
+                    }
+                }
+                .InviteduserModal-Btn{
+                    float: right;
+                    position: inline;
+                    margin: .5rem;
+                    h2{
+                        margin: .5rem;
+                    }
+                }
+            }
+        }
+        .InviteduserModal-Footer{
+            margin: auto;
+            background: $button-background-color;
+            border-radius: 0 0 2rem 2rem;
+            color: white;
+            h2{
+                max-width: none !important;
+            }
+        }
+    }
+}

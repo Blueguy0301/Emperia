@@ -1,0 +1,106 @@
+@import './sass-components/imports';
+@import 'sweetalert2/src/sweetalert2.scss';
+@include Btn-Design;
+.welcome {
+  margin-left: 1rem;
+}
+.title-headers {
+  margin: 0 0 0 3rem;
+  max-width: max-content;
+}
+.Create-Event {
+  flex-wrap: wrap;
+  .Btn-Primary {
+    margin: 0 3rem 0 auto;
+  }
+}
+.cards {
+  margin-bottom: 3rem;
+  .btn-group {
+    @include FlexCenter;
+    .Btn-Primary {
+      margin: 0;
+    }
+    margin-right: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-left: auto;
+    max-width: 100%;
+  }
+}
+.home {
+  .events {
+    padding: 1rem 0;
+  }
+}
+.help {
+  h2 {
+    margin: 2rem;
+    text-align: center;
+  }
+  flex-direction: column !important;
+  padding-bottom: 100px;
+}
+.loader {
+  border: 16px solid $button-background-color; /* Light grey */
+  border-top: 16px solid $highlights; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 500ms linear infinite;
+}
+.EULA,
+.Privacy {
+  p,
+  ul,
+  li {
+    font-size: 1em !important;
+    max-width: 100% !important;
+    text-align: justify;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1.5em;
+    text-align: center !important;
+  }
+  width: 100%;
+  max-height: 15em;
+  overflow: auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loading {
+  @include FlexCenter;
+  flex-direction: column !important;
+  min-height: 20rem;
+  p {
+    margin-top: 1rem;
+    color: $black-color;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .Create-Event {
+    @include FlexCenter;
+    h2 {
+      margin: auto;
+      font-size: 1.5rem;
+    }
+    .Btn-Primary {
+      padding: 0.75rem 0.5rem;
+    }
+  }
+  .welcome {
+    font-size: 1.5em;
+  }
+}

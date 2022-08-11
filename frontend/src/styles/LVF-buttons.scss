@@ -1,0 +1,171 @@
+/* DROP-UP (EMOJI AND ELIPSIS) */
+.LVF-Comments-emoji-btn, .LVF-Comments-3dots-btn {
+    border: none;
+    background-color: #c4c4cc42;
+    color: white;
+    font-size: 1.5rem;
+    padding: -10rem !important;
+  }
+  .LVF-dropup, .LVF-dropup-3dots {
+    display: inline-block !important;
+    padding: 1mm !important;
+    position: relative;
+  }
+  .LVF-dropup-emoji {
+    bottom: 1.8rem;
+    background-color: #6c9aff;
+    display: none ;
+    min-width: 2rem;
+    position: absolute !important;
+    z-index: 99 !important;
+  }
+  .LVF-dropup-3dots-content{
+    background-color: #6c9aff;
+    border-radius: 1rem;
+    bottom: 1.8rem; 
+    display: none;
+    min-width: 5rem;
+    position: absolute !important;  
+  }
+  .LVF-dropup-emoji, .LVF-dropup-3dots-content {
+    a {
+    border-radius: 1rem;
+    color: black;
+    display: block !important;
+    padding: .5rem .5rem !important;
+    text-decoration: none !important;
+    font-size: 1rem !important;
+    }
+  }
+  .LVF-dropup-emoji, .LVF-dropup-3dots-content {
+    a:hover {
+    background-color: #1E519E;
+    }       
+  }
+  .LVF-dropup:hover {
+    .LVF-dropup-emoji{
+    border-radius: 1rem !important;
+    display: block !important;
+    }
+  }
+  .LVF-dropup-3dots:hover{
+  .LVF-dropup-3dots-content{
+    display: inline-flex !important;
+  }
+  }
+  .LVF-dropup:hover{
+    .LVF-Comments-emoji-btn{
+    background-color: #c4c4cc42 ;
+    padding-right: -3rem;
+  }
+  }
+  .LVF-dropup-3dots{
+  .LVF-Comments-3dots-btn {
+    background-color: #c4c4cc42 ;
+    border-radius: 1rem;
+    margin-right: -6rem;
+  }
+  }
+  
+  /* DROP-DOWN (CATEGORY AND PRIVACY) */
+  .LVF-select-CATEGORY, .LVF-select-PRIVACY {
+      background-color:#78E7F6;
+      border: .1rem solid #0000008e;	
+    border-radius: 5px;
+    color: #000000;
+      cursor: pointer;
+    margin: .5rem;
+    padding: .5rem;
+  }
+  .LVF-select-CATEGORY:focus, .LVF-select-PRIVACY:focus
+  .LVF-select-CATEGORY:hover, .LVF-select-PRIVACY:hover{	
+      border: .1rem solid #1E519E;
+    outline: none;
+  }
+  .LVF-select-CATEGORY, .LVF-select-PRIVACY {
+    option{
+      background: #78E7F6;
+    padding-top: .25rem;
+  }
+  }
+  
+  
+  /* DROP-DOWN (LIVE-SETTINGS AND COMMENTS) */
+  .LVF-select {
+    background-color: #EDCB5A;
+    border: .1rem solid #0000008e;
+    border-radius: .5rem;
+    color: #333333;
+    cursor: pointer;
+      padding: 8px 12px;
+  }
+  
+  /* BUTTONS COLLAPSIBLE (LVF.js)*/
+  .LVF-btn-1{
+    margin-left: 1% !important;
+  }
+  .LVF-btn-2{
+    margin-left: 1% !important;
+  }
+  .LVF-btn-3{
+    margin-left: 1% !important;
+  }
+  
+  /* BUTTONS SIZES (COMMENT) */
+  .LVF-Comments-enter-btn{
+    font-size: .9rem;
+    margin-left: -.4rem;
+    margin-right: none;
+  }
+  .LVF-Comments-Input{
+    border-radius: .5rem;
+    height: 2rem;
+    margin-bottom: .3rem;
+    margin-left: -1rem;
+    margin-top: .3rem;
+    max-width: 100%;
+    width: 100%;
+  }
+  .LVF-Comments-InputBar{ 
+    display: flex;
+    width: 80%;
+  }
+  .LVF-Comments-Enter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .LVF-Comments-emoji-btn{
+    font-size: .9rem !important;
+  }
+  .LVF-commentemoji{
+    font-size: .9rem !important;
+  }
+  .LVF-Comments-3dots-btn{
+    font-size: .9rem;
+    margin-left: -.3rem !important;
+  }
+  .LVF-comment3dots{
+    font-size: .9rem;
+  }
+  
+  
+  /* drop up button colors */
+  .fa-ellipsis-h, .fa-smile, .fa-paper-plane{
+    color: #1E519E;
+  }
+  .fa-thumbs-up{
+    color: #ffffff;
+  }
+  .fa-heart{
+    color: #ff004c;
+  }
+  .fa-grin-squint, .fa-frown{
+    border: .1rem;
+    color: #EDCB5A;
+  }
+  .fa-angry{
+    color: #ff004c;
+  }
+  
+  

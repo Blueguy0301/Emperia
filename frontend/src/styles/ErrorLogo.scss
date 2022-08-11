@@ -1,0 +1,15 @@
+.ErrorLogo {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .ErrorLogo-BG {
+    img {
+      min-height: 100%;
+      max-width: 100%;
+      width: 50rem !important;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}

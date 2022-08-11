@@ -1,0 +1,114 @@
+@import './sass-components/imports';
+.VLVFVideo {
+  padding: 0 1rem;
+  .video {
+    max-width: 100%;
+    width: 50%;
+    min-height: 70vh;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    //set height to be 16:9 aspect ratio with max width of 50%
+  }
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+  .viewers {
+    width: max-content;
+    position: relative;
+    bottom: 20px;
+    left: calc(75% - 5rem);
+    color: red !important;
+  }
+  min-width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  flex: 1;
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    flex-wrap: wrap;
+    height: auto;
+    flex-grow: 1;
+    max-height: 40%;
+    text-align: auto;
+  }
+  .chat {
+    flex: 1;
+  }
+  .Collapsible {
+    height: 100%;
+    flex-grow: 1;
+    .Btn-Primary {
+      margin-bottom: 1rem;
+    }
+    text-align: center;
+  }
+  .title {
+    margin: 1rem 0 0 1rem;
+    h3 {
+      font-size: 2rem;
+      color: $black-color;
+    }
+    h4 {
+      font-size: 1.5rem;
+      color: $black-color;
+      max-width: 100% !important;
+    }
+  }
+  .VLVFContent-description {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    gap: 0 1rem;
+    flex-basis: 100%;
+    align-items: center;
+    .Btn-Primary {
+      margin-left: auto;
+    }
+    .about,
+    .Organizer {
+      width: 100%;
+    }
+    .Desc {
+      padding-bottom: 3rem;
+    }
+  }
+}
+@media only screen and (max-width: 800px) {
+  .VLVFVideo {
+    margin: auto;
+    .VLVFContent-description {
+      justify-content: center;
+      align-items: center;
+      .Btn-Primary {
+        margin-right: auto;
+      }
+      .about,
+      .Organizer,
+      .Desc {
+        text-align: center;
+      }
+      .Desc {
+        padding-bottom: 3rem;
+      }
+    }
+    .viewers {
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+    .video {
+      // min-height: 100%;
+      width: 100%;
+      //force aspect ratio to be 16:9
+      position: relative;
+    }
+  }
+}

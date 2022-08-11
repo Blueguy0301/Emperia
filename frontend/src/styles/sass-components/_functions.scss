@@ -1,0 +1,10 @@
+@function animate($position){
+    @return $position;
+}
+@function Setrow($wrapper){
+    $second: ($wrapper *6);
+    $first: (($wrapper - 1) * 6);
+    @return #{$first/#{$second}};
+}
+
+//if for eacp while  are the only available. return is a must.

@@ -1,0 +1,71 @@
+@import './sass-components/imports';
+.collapsible {
+  h1 {
+    text-align: center;
+    margin: auto;
+  }
+  h2 {
+    text-align: center;
+    width: 100%;
+    margin: auto !important;
+  }
+  .content {
+    border-radius: 20px;
+    text-align: center;
+  }
+  .content-parent {
+    height: 0px;
+    overflow: hidden;
+  }
+  .content-parent.show {
+    height: 50px;
+  }
+  .buttons {
+    flex-wrap: wrap;
+    flex-basis: 100% !important;
+    @include FlexCenter;
+    gap: 1rem;
+    width: 100%;
+    min-height: 2.5em;
+    padding-bottom: 1rem;
+    .Btn-Primary {
+      //grow when there is an extra space flex
+      flex-grow: 1;
+    }
+  }
+  .green {
+    background-color: $green-color !important;
+  }
+  .red {
+    background-color: $red-color !important;
+  }
+}
+.btn {
+  text-decoration: none;
+  padding: 5px 15px;
+  font-size: calc(1vw + 0.5rem);
+  color: $font-color;
+  border-radius: 20px;
+  margin: 0.2rem;
+  font-size: calc(1vw + 0.7rem);
+}
+.btn:hover {
+  background: $grey-color;
+  cursor: pointer;
+}
+.btn1 {
+  text-decoration: none;
+  padding: 5px 15px;
+  font-size: calc(1vw + 0.5rem);
+  background: $blue-color;
+  color: $font-color;
+  border-radius: 20px;
+  margin: 0.2rem;
+  margin-top: 10rem;
+  margin-left: 2rem;
+  font-size: calc(1vw + 0.7rem);
+}
+.btn1:hover {
+  background: $grey-color;
+  cursor: pointer;
+}

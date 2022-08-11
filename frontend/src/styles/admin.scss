@@ -1,0 +1,37 @@
+@import './sass-components/imports';
+#admin {
+  p,
+  h1,
+  h2 {
+    max-width: 100% !important;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  .button-top {
+    @include FlexCenter;
+    gap: 1em;
+    margin: auto;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    .Btn-Primary {
+      margin: auto;
+    }
+  }
+  .Collapsible {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .Collapsible__contentOuter {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .Collapsible__contentInner {
+    padding: 1rem;
+  }
+}

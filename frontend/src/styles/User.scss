@@ -1,0 +1,25 @@
+.cover
+{
+height: 330px;
+width: 100%;
+position: relative;
+background-color: rgb(19, 122, 206);
+border-radius: 4px;
+}
+.profile
+{
+background-color:rgb(16, 16, 235);
+height: 300px;
+width: 220px;
+position: relative;
+left: 3rem;
+top: 6rem;
+border-radius: 5px;
+box-shadow: 7px 5px #1f1e1e;
+}
+.header 
+{
+padding: 20px;
+font-size: 35px;
+display:flex;
+}

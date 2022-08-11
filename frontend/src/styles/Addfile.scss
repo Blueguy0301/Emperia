@@ -1,0 +1,64 @@
+@import './sass-components/imports';
+.collapsible .toggle
+{
+    background: $blue-color;
+    border-radius: 20rem;
+    padding: 5px 15px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: $font-color;
+    margin-bottom: 0.5rem;
+    position: relative;
+    left: 21rem;
+    top: 0rem;
+    margin: 1rem;
+    float: left;
+}
+.collapsible .toggle:hover
+{
+    background: $grey-color;
+    cursor: pointer;
+}
+.collapsible .content
+{
+    border: 1px solid $grey-color;
+    padding: 0px;
+    border-radius: 20px;
+    margin-bottom: 0.5rem;
+    position: relative;
+    width: 8rem;
+    text-align: center;
+    background: $highlights;
+    left:7.5rem;
+    top: 0.4rem; 
+}
+.collapsible .content-parent 
+{
+   height: 0px;
+   overflow: hidden;
+   transition: height ease 0.3s;
+}
+.collapsible .content-parent.show
+{
+    height: auto;
+}
+.btn
+{
+    text-decoration: none;
+    padding: 5px 15px;
+    font-size: 1.25rem;
+    position: relative;
+    background: $blue-color;
+    color: $font-color;
+    border-radius: 20px;
+    top: 1rem;
+    float: left;
+    left: 16em;
+    margin-left: 1rem;
+ }
+.btn:hover
+{
+    background: $grey-color;
+    cursor: pointer;
+}
+

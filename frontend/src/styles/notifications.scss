@@ -1,0 +1,42 @@
+@import './sass-components/imports.scss';
+.notif {
+  @include FlexCenter;
+  flex-direction: column;
+  max-width: 100% !important;
+  width: 100%;
+  h3,
+  p,
+  h1 {
+    color: black !important;
+    text-align: center;
+    width: 100%;
+  }
+  .notif-container {
+    width: inherit;
+    max-width: 100%;
+    .notif-btn {
+      //* evenly distribute spcae using flex-grow
+      @include FlexCenter;
+      width: 100%;
+      border-bottom: black 3px solid;
+      gap: 1rem;
+      width: 100%;
+      .time,
+      .sender,
+      .title {
+        text-align: center;
+        width: 33% !important;
+        font-size: 1rem !important;
+      }
+      min-height: 4rem;
+      padding: 1rem;
+    }
+    .read {
+      background-color: lighten(rgb(51, 51, 51), 70%) !important;
+    }
+    .unread {
+      background-color: rgba($secondary-color, 0.5);
+    }
+  }
+  padding: 1rem;
+}

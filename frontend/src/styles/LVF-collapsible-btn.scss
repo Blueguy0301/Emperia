@@ -1,0 +1,8 @@
+.collapsible{
+    padding: 1rem !important;
+}
+.collapsible .content-parent{
+    height: 0px;
+    overflow: hidden;
+    transition: height ease .8s;
+}

@@ -1,0 +1,46 @@
+@import './sass-components/imports';
+.contact {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  h4,
+  label {
+    color: black !important;
+  }
+  svg {
+    color: $button-background-color;
+  }
+
+  @include ToggleDesign;
+  flex-direction: column;
+  .row-2 {
+    @include FlexCenter;
+    width: 100%;
+    gap: 0 0.5rem;
+  }
+  textarea {
+    padding: 10px 1rem;
+    font-family: $text-box-font;
+    font-size: 1rem;
+    border: 1px solid $button-background-color;
+    border-radius: 0.25rem;
+    min-height: 6rem;
+    width: 100%;
+    overflow: auto;
+    min-height: 5rem;
+    word-wrap: break-word;
+    word-break: break-word;
+    resize: none;
+  }
+  #EventType {
+    @include FlexCenter;
+    flex-wrap: wrap;
+  }
+  #type {
+    text-align: left;
+  }
+
+  .question-circle {
+    text-align: right;
+  }
+}

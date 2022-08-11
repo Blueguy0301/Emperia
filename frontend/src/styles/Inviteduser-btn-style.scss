@@ -1,0 +1,44 @@
+@import './sass-components/imports';
+.invited {
+  .inviteduser-box {
+    flex-grow: 0 !important;
+    .invited-button {
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: row;
+      border: 1px solid #000;
+      align-items: center;
+      background-color: $button-background-color;
+      flex-wrap: wrap;
+      padding: 0.5rem;
+      gap: 10px;
+    }
+    button {
+      background-color: rgba(0, 0, 0, 0) !important;
+    }
+    .inviteduser-box-BG {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      box-shadow: 0 0.3rem 10rem rgba(0, 0, 0, 0.08);
+      overflow: auto;
+      .inviteduser-profile-img {
+        padding: 5px;
+        margin: auto;
+      }
+      .fa-user-circle {
+        font-size: 2rem;
+        color: white !important;
+      }
+      .fa-times {
+        font-size: 1rem;
+        margin-left: 1rem;
+        margin-right: 0.2rem;
+        color: #eee !important;
+      }
+    }
+  }
+  .inviteduser-name {
+    margin: auto;
+  }
+}

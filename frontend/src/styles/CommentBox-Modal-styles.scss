@@ -1,0 +1,86 @@
+@import './sass-components/imports';
+.CommentBoxModal {
+  padding: 0rem 0.5rem;
+  .CommentModal-btn {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  a {
+    color: $button-background-color;
+    text-decoration: underline !important;
+    //set font size
+    font-size: inherit !important;
+  }
+  a:hover {
+    color: darken($button-background-color, 30%);
+  }
+  .CommentBoxModal-BG {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 1rem;
+    background: $button-background-color;
+
+    .CommentBoxModal-Body {
+      background: #76ccfd;
+      max-width: 100%;
+      min-height: 30rem;
+      max-height: 30rem;
+      //width: 25rem;
+      border-top: 1px solid $black-color;
+      .CommentBoxModal-othercomment {
+        overflow: auto;
+        max-width: 100%;
+        max-height: 100%;
+        border: 1px solid $black-color;
+        border-radius: 1rem;
+        margin: 2%;
+        background: $grey-color;
+        p {
+          word-break: break-all;
+          color: $black-color;
+          font-size: 1rem !important;
+          font-weight: 900;
+          margin: 3%;
+          max-width: 100% !important;
+        }
+      }
+    }
+    .CommentBoxModal-Footer {
+      max-width: 100% !important;
+      border-top: 1px solid $black-color;
+      overflow: hidden;
+      .CommentBoxModal-InputBar {
+        min-height: 3rem;
+        display: flex;
+        flex-grow: 1;
+        padding: 10px 0;
+        gap: 10px;
+        input[type='text'] {
+          flex-wrap: wrap;
+          flex: 1;
+          flex-grow: 1;
+          font-size: 100%;
+          padding: 0.4rem;
+          border-radius: 1rem;
+        }
+      }
+      button {
+        box-shadow: 1px 1px 5px $black-color;
+        font-size: 0.75rem !important;
+        max-height: 100%;
+        max-width: 100%;
+        margin-bottom: auto !important;
+        margin-right: 5% !important;
+        margin-top: auto;
+      }
+      .CommentBoxModal-Btn {
+        border-top: 1px solid $black-color;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .CommentBoxModal {
+    padding: 0;
+  }
+}

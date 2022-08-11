@@ -1,0 +1,80 @@
+@import './sass-components/imports';
+@import './sass-components/components';
+.Login {
+  //disable select
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently */
+  .bg-custom {
+    background-size: cover;
+    max-height: 100% !important;
+  }
+  .content {
+    @include FlexCenter;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    margin-right: 1rem;
+    .flex,
+    h3 {
+      padding: 1rem;
+      gap: 1rem;
+      flex-wrap: wrap;
+      .Btn {
+        flex-grow: 1;
+      }
+      position: relative;
+      z-index: 50;
+    }
+
+    p {
+      max-width: 100%;
+      span::after {
+        content: '.';
+        display: inline-block;
+        width: 10px;
+      }
+      text-align: left;
+    }
+    img {
+      max-width: 100%;
+    }
+    .column {
+      justify-content: center;
+      span {
+        font-size: 3rem;
+      }
+    }
+    .feature {
+      padding: '1rem';
+      h4 {
+        text-align: left;
+        padding: 1rem;
+      }
+    }
+  }
+  .waves {
+    z-index: 0;
+    position: absolute;
+    //place at the end of the div
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: scaleY(1.1);
+    // z-index: -1;
+  }
+}
+@media (max-width: 425px) {
+  .Login {
+    .waves {
+      position: absolute;
+      top: 0;
+      bottom: unset;
+      transform: rotateX(180deg) scaleY(2);
+    }
+  }
+}

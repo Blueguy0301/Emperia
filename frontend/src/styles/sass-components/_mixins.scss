@@ -1,0 +1,198 @@
+@use 'sass:math';
+@use 'sass:color';
+@mixin FlexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin MarginCenter {
+  place-items: center;
+  align-self: center;
+  justify-self: center;
+}
+@mixin table {
+  .section-table {
+    h3 {
+      text-align: center;
+    }
+    border-spacing: 0;
+    width: 100%;
+    max-width: 100%;
+    //set max width to 100%
+    table-layout: fixed;
+    //set table layout to fixed
+
+    tr:nth-child(even) {
+      background-color: rgba($lightblue-color, 0.5);
+    }
+    th {
+      background-color: $lightblue-color;
+    }
+    tr:hover {
+      background-color: rgb($highlights, 0.3);
+    }
+    td,
+    th {
+      //if the text is overflowing add elpisis instead
+      h5 {
+        text-overflow: ellipsis;
+        //set the text to ellipsis
+        overflow: hidden;
+      }
+      border: 1.5px solid $button-background-color;
+    }
+    .btn-group {
+      .Btn-Primary {
+        min-width: 0 !important;
+        padding: 1rem 0.5rem;
+      }
+      padding: 0.5rem 0;
+    }
+
+    tr {
+      th {
+        font-family: $title-font;
+        font-weight: 600;
+        font-size: 1.25rem !important;
+        //* evenly spaced the columns
+        text-align: center;
+        padding: 0.5rem;
+      }
+    }
+    .table-section {
+      text-align: center;
+      max-width: 20% !important;
+    }
+    .table-name {
+      text-align: center;
+      width: 40%;
+      min-width: 40% !important;
+    }
+    .gray {
+      background-color: gray !important;
+    }
+  }
+}
+@mixin Btn-Design {
+  .Btn-Primary {
+    padding: $padding-button-size;
+    color: white;
+    background-color: $button-background-color;
+    border-radius: 30px;
+    //when text is too long it will be cut off
+    word-break: break-word;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+  }
+  .Btn-Primary:hover {
+    transition: background-color 500ms ease;
+    color: black;
+    background-color: $end-point;
+  }
+  .Btn-Primary:not(:hover) {
+    transition: background-color 500ms ease;
+    background-color: $button-background-color;
+  }
+}
+@mixin Typography {
+  h1 {
+    font-family: $title-font;
+    max-height: 100%;
+    color: white;
+    margin-bottom: 10%;
+    margin-right: 100;
+    line-height: 1.5;
+    max-width: 30ch;
+    word-break: normal;
+    position: relative;
+  }
+  span {
+    text-shadow: 3px 2px rgba(0, 0, 0, 0.5);
+    color: $highlights;
+  }
+}
+@mixin nav-Design {
+  .nav {
+    @include FlexCenter;
+    transition: all ease-in 250ms;
+    width: 10px;
+    height: inherit;
+    max-width: 100%;
+    opacity: 1;
+    &-item {
+      justify-items: center;
+      padding: $padding-button-size;
+      font-size: 130%;
+      font-weight: 900;
+      border-radius: 100px;
+      text-align: center;
+    }
+    &-item:not(:hover),
+    .Btn-Primary:not(:hover) {
+      background-color: $button-background-color;
+      transition: all 500ms ease-in-out;
+      color: lighten($font-color, 20%);
+    }
+    &-item:hover,
+    .Btn-Primary:hover {
+      background-color: darken($button-background-color, 20%);
+      color: white;
+      transition: all 250ms ease-in-out;
+    }
+  }
+}
+@mixin ToggleDesign {
+  .toggle {
+    max-height: 80px !important;
+    @include FlexCenter;
+    input[type='checkbox'] {
+      height: 0 !important;
+      width: 0 !important;
+      visibility: hidden !important;
+    }
+    label {
+      transition: all 300ms ease-in-out;
+      cursor: pointer;
+      text-indent: -9999px;
+      width: 100px;
+      height: inherit;
+      background: $highlights;
+      display: block;
+      border-radius: 5rem;
+      position: relative;
+    }
+    label:after {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      width: 50% !important;
+      height: 60%;
+      background: $button-background-color;
+      border-radius: 50px;
+      transition: 0.3s;
+    }
+    input:checked + label {
+      background: $background-content-color;
+    }
+
+    input:checked + label:after {
+      left: calc(100% - 5px);
+      transform: translateX(-100%);
+    }
+
+    label:active:after {
+      width: 50px;
+    }
+  }
+  .green {
+    input:checked + label {
+      background: red;
+    }
+    label {
+      background: green;
+    }
+  }
+}

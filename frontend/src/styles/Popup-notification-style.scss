@@ -1,0 +1,75 @@
+.Popup-Notifications{
+    z-index: 99;
+    width: 25%;
+    position: absolute;
+    /* transform: translate(-50%, -50%); */
+    top: 80%;
+    left: 50%;
+    /* overflow: hidden; */
+    position:fixed;
+}
+.Popup-Notifications-BG{
+    max-width: /*clamp(1em, 24vw, 30em)*/ 100%;
+    width: 99%;
+    max-height: /*clamp(5em, 8vw, 30em)*/ 100%;
+    height: 99.9%;
+    border-radius: .8rem;
+    border: .1rem solid #000;
+    background: linear-gradient(to bottom, #255aaa 0%, #0cc2df 100%);
+    display: grid;
+    grid-template-columns: 1.3fr 6fr 0.5fr;
+    box-shadow: 0 .3rem 10rem rgba(0,0,0,0.08);
+    /* transform: translate(-195%, 100%); */
+    overflow: auto;
+    animation: show_slide 2s ease forwards;
+}
+ @keyframes show_slide{
+    0%{
+        transform: translateX(-210%);
+    }
+    20%{
+        transform: translateX(-200%);
+    }
+    50%{
+        transform: translateX(-210%);
+    }
+    100%{
+        transform: translateX(-200%);
+    }
+}   
+.Popup-Notif-TextContext, .Popup-Notif-Btn{
+    align-self: center;
+    p:first-child{
+        font-size: clamp(2em, 4vw, 3.2em) !important;
+        color: #eee;
+        font-weight: 600 !important;
+    }
+    p:last-child{
+        font-size: .8rem !important;
+        color: #eee;
+        font-weight: 400 !important;
+    }
+}
+.Popup-Notif-Btns{
+    margin: 1rem 1rem .5rem 1rem;
+}
+.close-btn{
+    align-self: flex-start;
+}
+.share-btn{
+    align-self: flex-end;
+}
+.fa-times-circle, 
+.fa-share{
+    color: #eee;
+}
+.Popup-Notif-Image{
+    font-size: 3rem;
+    align-self: center;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    color: #eee;
+}
+.fa-exclamation-circle{
+    color:#ffffff;
+}

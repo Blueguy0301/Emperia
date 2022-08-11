@@ -1,0 +1,25 @@
+{
+  "short_name": "Emperia",
+  "name": "Emperia",
+  "icons": [
+    {
+      "src": "/assets/Logo/NM-128.ico",
+      "sizes": "128x128",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/assets/Logo/NM-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/assets/Logo/NM-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#1e519e",
+  "background_color": "#1e519e"
+}

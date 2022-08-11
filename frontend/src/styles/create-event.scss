@@ -1,0 +1,219 @@
+@import './sass-components/imports';
+@mixin asd {
+  label{
+    color: black !important;
+  }
+  label::after {
+    content: ':';
+  }
+  label::before {
+    content: '';
+    width: 10rem;
+  }
+}
+#EventForm {
+
+  .banner::before {
+    width: 0 !important;
+  }
+  #forms-event {
+    display: flex;
+    flex-direction: column;
+    width: 100% !important  ;
+    gap: 2rem;
+  }
+  h1,
+  h3 {
+    color: darken(white, 100%) !important;
+  }
+  form {
+    @include FlexCenter;
+    width: 100% !important;
+    flex-direction: column !important;
+    row-gap: 1em;
+  }
+  .row {
+    @include asd;
+    input[type='text'] {
+      outline: red;
+      cursor: text;
+      text-align: center !important;
+      font-size: 1.5rem;
+      border-radius: 0 50px 50px 0;
+      outline: none;
+      border: 1px solid $highlights;
+    }
+    .text-holder {
+      width: 100%;
+    }
+    input {
+      padding: $padding-button-size !important;
+      margin: auto 0 auto auto;
+      width: 100% !important;
+    }
+    label {
+      font-family: $body-font !important;
+      font-weight: 500 !important;
+      width: 25%;
+    }
+    .correct {
+      border: 1px green solid !important;
+    }
+    .incorrect {
+      border: 1px red solid !important;
+    }
+    .question-circle {
+      width: 25%;
+      margin: 0 !important;
+    }
+  }
+  .col {
+    .row {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    .errors {
+      color: #ff0000 !important;
+      text-align: center;
+    }
+    .Background-red {
+      padding: 1rem;
+      border-radius: 10px;
+      background-color: rgba(#f99494, 0.8);
+    }
+    display: flex;
+    gap: 1em;
+    flex-direction: column !important;
+  }
+  .question-circle {
+    width: auto;
+    margin: 0 10px auto 0;
+    .fa-question-circle {
+      font-size: 1.5rem;
+      color: $button-background-color;
+      width: 100%;
+    }
+  }
+  #invited-container,
+  #invited-results {
+    h3 {
+      display: flex;
+      align-items: center;
+    }
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  //checkbox
+  @include ToggleDesign;
+  .disabled {
+    input:checked + label {
+      background: gray;
+    }
+    label {
+      background: grey;
+    }
+  }
+
+  .row-2 {
+    h4 {
+      color: black;
+    }
+    @include asd;
+    max-height: 80px !important;
+    column-gap: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    #type {
+      display: block !important;
+      flex-grow: 0 !important;
+      flex-wrap: nowrap;
+      justify-content: unset !important;
+    }
+  }
+  .row-3 {
+    max-width: 100%;
+    display: flex;
+    row-gap: 1rem;
+    flex-wrap: wrap;
+  }
+  #EventType {
+    flex-wrap: wrap;
+    row-gap: 0px;
+    column-gap: 0 !important;
+  }
+  .react-datepicker__input-container {
+    text-align: center;
+    input {
+      width: 100% !important;
+    }
+  }
+  .react-datepicker-wrapper {
+    display: flex !important;
+    flex-grow: 1;
+    flex-basis: 100%;
+    width: 0 !important;
+  }
+
+  .react-datepicker__triangle {
+    left: -10% !important;
+  }
+  [type='file'] {
+    color: black;
+    font-family: $body-font;
+    font-weight: 500;
+    font-size: calc(1em - 0.2rem);
+    margin-left: auto;
+    max-width: 100%;
+    margin-right: auto;
+  }
+  [type='file']::-webkit-file-upload-button {
+    color: white;
+    padding: $padding-button-size;
+    border-radius: 50px;
+    outline: none;
+    font-family: $button-font;
+    border: none;
+    transition: background-color 0.3s linear;
+    background-color: $button-background-color;
+  }
+  [type='file']::-webkit-file-upload-button:hover {
+    color: black;
+    background-color: $highlights;
+    cursor: pointer;
+  }
+  padding-bottom: 3rem;
+  .upload {
+    color: black;
+  }
+  #upload {
+    label:after {
+      width: unset !important;
+    }
+  }
+}
+@media only screen and (max-width: 1200px) {
+  #EventForm {
+    .row {
+      label::before {
+        width: 1px;
+      }
+      label {
+        justify-content: flex-start;
+        width: 35%;
+        max-width: 50%;
+        font-size: min(3.5vw, 15px);
+      }
+      input[type='text'] {
+        font-size: 15px;
+      }
+    }
+  }
+}
