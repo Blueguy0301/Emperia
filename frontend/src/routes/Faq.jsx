@@ -10,25 +10,25 @@ import {
   AFAQ,
   AFAQAnswers,
 } from '../components/logic/useQuestions'
-import '../styles/FAQ.scss'
+import '../styles/faq.scss'
 const FaQ = () => {
   const trigger = text => (
     <>
       <h4>{text}</h4>
       <i class="fas fa-caret-down"></i>
     </>
-  )   
-  useEffect(() =>  { 
-    window.scrollTo(0, 0) 
+  )
+  useEffect(() => {
+    window.scrollTo(0, 0)
   })
   return (
-  <div className="FAQ">
-      <div className='title'>
+    <div className="FAQ">
+      <div className="title">
         <h1>Freqently Asked Questions</h1>
-         <br />
+        <br />
         <h2>All Users</h2>
-      </div>  
-         <br />
+      </div>
+      <br />
       {questions.map((question, index) => (
         <Collapsible
           trigger={trigger(question)}
@@ -41,9 +41,9 @@ const FaQ = () => {
           </div>
         </Collapsible>
       ))}
-       <div className='title-2'>  
-         <h3>Event Organizers</h3>
-       </div>
+      <div className="title-2">
+        <h3>Event Organizers</h3>
+      </div>
       {EOFAQ.map((question, index) => (
         <Collapsible
           trigger={trigger(question)}
@@ -56,9 +56,9 @@ const FaQ = () => {
           </div>
         </Collapsible>
       ))}
-       <div className='title-3'>
+      <div className="title-3">
         <h3>Admin</h3>
-       </div> 
+      </div>
       {AFAQ.map((question, index) => (
         <Collapsible
           trigger={trigger(question)}
@@ -71,12 +71,10 @@ const FaQ = () => {
           </div>
         </Collapsible>
       ))}
-       <div className="about-btn-bck Btn-Primary">
-          <Link to="/">
-            Back
-         </Link>
-        </div> 
-  </div>
+      <div className="about-btn-bck Btn-Primary">
+        <Link to="/">Back</Link>
+      </div>
+    </div>
   )
 }
 export default FaQ
